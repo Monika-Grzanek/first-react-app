@@ -1,16 +1,11 @@
-.columnForm {
+.cardnForm {
     margin: 5px;
     padding: 10px;
     text-align: center;
-
-    span {
-        margin: 10px;
-        font-size: 20px;
-    }
 };
 
 @media (max-width: 767px) {
-    .columnForm {
+    .cardForm {
       width: 50%;
       margin-left: auto;
       margin-right: auto;
