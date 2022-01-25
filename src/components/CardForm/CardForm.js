@@ -9,7 +9,7 @@ const CardForm = props => {
     const dispatch = useDispatch();
     const handleSubmit = e => {
         e.preventDefault();
-        dispatch({ type: 'ADD_CARD', payload: { title } });
+        dispatch({ type: 'ADD_CARD', payload: title });
         setTitle('');
     };
     return (
