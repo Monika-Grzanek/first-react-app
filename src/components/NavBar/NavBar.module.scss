@@ -13,10 +13,15 @@
         text-decoration: none;
         margin: 8px;
         color: $color-light;
+
+        &.linkActive {
+            color: $color-warning;
+        }
     }
 
     li {
         display: inline;
     }
 }
+
 
