@@ -12,7 +12,7 @@ const ColumnForm = props => {
     const dispatch = useDispatch();
     const handleSubmit = e => {
         e.preventDefault();
-        dispatch(addColumn({ title, icon, listId: props.listId }));
+        dispatch(addColumn({ title, icon, listId: props.listId}));
         setTitle('');
         setIcon('');
     };
