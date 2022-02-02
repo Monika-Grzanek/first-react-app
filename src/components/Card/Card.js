@@ -1,18 +1,18 @@
 import styles from './Card.module.scss';
-import {cardFavorite} from '../../redux/store';
+import {cardFavorite} from '../../redux/store.js';
 import { useDispatch } from 'react-redux';
 import clsx from 'clsx';
 
 const Card = props => {
     const dispatch = useDispatch();
-    const handleSubmit = e => {
+    const handleToggleFavorite = e => {
         e.preventDefault();
-        dispatch(cardFavorite({ isFavorite: props.isFavorite, cardId: props.id }));
+        dispatch(cardFavorite({ isFavorite: props.isFavorite, id: props.id }));
     };
     return (
-        <li className={styles.card}>
+        <li className={styles.card} key={props.id}>
             {props.title}
-            <button onClick={handleSubmit}><span className={clsx('fa fa-star-o', props.isFavorite && styles.isFavorite)} /></button>
+            <button onClick={handleToggleFavorite}><span className={clsx('fa fa-star-o', props.isFavorite && styles.isFavorite)} /></button>
         </li>
     );
 };

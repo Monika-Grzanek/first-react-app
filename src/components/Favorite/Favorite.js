@@ -7,11 +7,13 @@ import Card from './../Card/Card.js';
 const Favorite = () => {
     const favoriteCards = useSelector((state) => getFilteredFavoriteCards(state));
     return (
-        <article className={styles.column}>
+        <article className={styles.favorite}>
             <PageTitle>Favorite</PageTitle>
-            <ul className={styles.cards}>
-                {favoriteCards.map(card => <Card key={card.id} {...card} />)}
-            </ul> 
+            <div className={styles.column}>
+                <ul className={styles.cards}>
+                    {favoriteCards.map(card => <Card key={card.id} title={card.id} isFavorite={card.isFavorite} id={card.id} />)}
+                </ul> 
+            </div>
         </article>
     )
 }
