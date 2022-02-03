@@ -1,5 +1,5 @@
 import styles from './Card.module.scss';
-import {cardFavorite} from '../../redux/store.js';
+import {cardFavorite} from '../../redux/cardsReducer';
 import { useDispatch } from 'react-redux';
 import clsx from 'clsx';
 

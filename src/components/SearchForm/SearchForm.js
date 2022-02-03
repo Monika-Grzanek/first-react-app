@@ -3,7 +3,7 @@ import TextInput from '../TextInput/TextInput.js';
 import Button from '../Button/Button.js';
 import { useDispatch } from 'react-redux';
 import { useState } from 'react';
-import { updateSearching } from '../../redux/store';
+import { updateSearching } from '../../redux/searchStringReducer';
 import { useEffect } from 'react';
 
 
