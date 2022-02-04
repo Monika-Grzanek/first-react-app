@@ -11,14 +11,23 @@
     justify-content: space-between;
     font-weight: bold;
 
-    button {
-        background-color: transparent;
-        border: transparent;
-        font-size: 18px;
-        cursor: pointer;
-
-        &.isFavorite {
-            color: $color-warning;
+    .btn {
+        justify-content: end;
+    
+        button {
+            background-color: transparent;
+            border: transparent;
+            font-size: 18px;
+            cursor: pointer;
+    
+            .isFavorite {
+                color: $color-shinning;
+                font-weight: bold;
+            }
         }
     }
 }
+
+
+
+
