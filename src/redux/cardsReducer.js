@@ -24,7 +24,7 @@ const cardsReducer = (statePart = [], action) => {
       case TOGGLE_CARD_FAVORITE:
         return statePart.map(card => (card.id === action.payload.id) ? { ...card, isFavorite: !card.isFavorite } : card);
       case REMOVE_CARD:
-        return [...statePart].filter(card => card.id !==  action.payload.id );
+        return statePart.filter(card => card.id !==  action.payload.id );
       default:
         return statePart;
     }
